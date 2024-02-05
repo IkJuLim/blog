@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://${DB_HOST}:3306/blog
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+logging.level:
+  org.hibernate:
+    type.descriptor.sql: trace #show parameter binding
+    SQL: DEBUG
